@@ -6,6 +6,7 @@ using OpenQA.Selenium.Firefox;
 using RelevantCodes.ExtentReports;
 using System;
 using System.IO;
+using System.Reflection;
 using static MarsFramework.Global.GlobalDefinitions;
 
 namespace MarsFramework.Global
@@ -15,10 +16,10 @@ namespace MarsFramework.Global
         #region To access Path from resource file
 
         public static int Browser = Int32.Parse(MarsResource.Browser);
-        public static String ExcelPath = Environment.CurrentDirectory + MarsResource.ExcelPath;
-        public static String ManageListingExcelPath = Directory.GetCurrentDirectory() + MarsResource.ManageListingExcelPath;//Directory.GetCurrentDirectory();
-        public static string ScreenshotPath = Directory.GetCurrentDirectory()+MarsResource.ScreenShotPath;
-        public static string ReportPath = Directory.GetCurrentDirectory()+MarsResource.ReportPath;
+        public static String ExcelPath =MarsResource.ExcelPath;
+        public static String ManageListingExcelPath =MarsResource.ManageListingExcelPath;//Directory.GetCurrentDirectory();
+        public static string ScreenshotPath = MarsResource.ScreenShotPath;
+        public static string ReportPath =MarsResource.ReportPath;
         #endregion
 
         #region reports

@@ -122,23 +122,23 @@
     <comment>1 for firefox and 2 for Chrome</comment>
   </data>
   <data name="ExcelPath" xml:space="preserve">
-    <value>MarsFramework\ExcelData\TestDataShareSkill.xlsx</value>
+    <value>C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\ExcelData\TestDataShareSkill.xlsx</value>
   </data>
   <data name="IsLogin" xml:space="preserve">
     <value>true</value>
     <comment>If true Login, else Register</comment>
   </data>
   <data name="ManageListingExcelPath" xml:space="preserve">
-    <value>MarsFramework\ExcelData\TestDataManageListings.xlsx</value>
+    <value>C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\ExcelData\TestDataManageListings.xlsx</value>
   </data>
   <data name="ReportPath" xml:space="preserve">
-    <value>\MarsFramework\TestReports\MarsReports.html</value>
+    <value>C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\TestReports\MarsReports.html</value>
   </data>
   <data name="ReportXMLPath" xml:space="preserve">
-    <value>\MarsFramework\Config\XMLFile.xml</value>
+    <value>C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\Config\XMLFile.xml</value>
   </data>
   <data name="ScreenShotPath" xml:space="preserve">
-    <value>\MarsFramework\TestReports\Screenshots\Preema Screenshots\</value>
+    <value>C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\TestReports\Screenshots\Preema Screenshots\</value>
   </data>
   <data name="string1" xml:space="preserve">
     <value />

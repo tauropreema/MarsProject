@@ -70,7 +70,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MarsFramework\ExcelData\TestDataShareSkill.xlsx.
+        ///   Looks up a localized string similar to C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\ExcelData\TestDataShareSkill.xlsx.
         /// </summary>
         internal static string ExcelPath {
             get {
@@ -88,7 +88,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MarsFramework\ExcelData\TestDataManageListings.xlsx.
+        ///   Looks up a localized string similar to C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\ExcelData\TestDataManageListings.xlsx.
         /// </summary>
         internal static string ManageListingExcelPath {
             get {
@@ -97,7 +97,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \MarsFramework\TestReports\MarsReports.html.
+        ///   Looks up a localized string similar to C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\TestReports\MarsReports.html.
         /// </summary>
         internal static string ReportPath {
             get {
@@ -106,7 +106,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \MarsFramework\Config\XMLFile.xml.
+        ///   Looks up a localized string similar to C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\Config\XMLFile.xml.
         /// </summary>
         internal static string ReportXMLPath {
             get {
@@ -115,7 +115,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \MarsFramework\TestReports\Screenshots\Preema Screenshots\.
+        ///   Looks up a localized string similar to C:\Users\Preema\MVP Studio\Competition Task Mars Project\marsframework\MarsFramework\TestReports\Screenshots\Preema Screenshots\.
         /// </summary>
         internal static string ScreenShotPath {
             get {

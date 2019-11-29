@@ -269,7 +269,48 @@ namespace MarsFramework.Pages
                         GlobalDefinitions.wait(5000);
                         LocationTypeOptions2.Click();
                     }
+                #region radio buttons
+                //Click on Skill trade radio button       
+            
+                if (GlobalDefinitions.ExcelLib.ReadData(2, "SkillTrade") == SkillTradeOptionText1.Text)
+                {
+                    if (!SkillTradeOption1.Selected)
+                    {
+                        SkillTradeOption1.Click();
+                    }
+                        //Enter the tag name in Skill exchange and press Enter key
+                        SkillExchange.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "Skill-Exchange"));
+                        SkillExchange.SendKeys(Keys.Enter);
+                    //}
+                }
+                else if (GlobalDefinitions.ExcelLib.ReadData(2, "SkillTrade") == SkillTradeOptionText2.Text)
+                {
+                    SkillTradeOption2.Click();
+                    CreditAmount.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "Credit"));
+                }
+                //Click on Active radio buttons
+                if (GlobalDefinitions.ExcelLib.ReadData(2, "Active") == ActiveOptionText1.Text)
+                {
+                    if (!ActiveOption1.Selected)
+                        ActiveOption1.Click();
+                }
+                else if (GlobalDefinitions.ExcelLib.ReadData(2, "Active") == ActiveOptionText2.Text)
+                    ActiveOption2.Click();
+                #endregion
+                //Click on File Upload
+                FileUpload.Click();
+                //Using AutoIt
+                // AutoItx Autoit = new AutoItx();
+                AutoItX.WinActivate("Open");
+                AutoItX.Sleep(500);
+             AutoItX.Send(@"C:\Users\anvil\Desktop\TestAnalyst.txt");
+                //GlobalDefinitions.wait(1200);
+                AutoItX.Send("{ENTER}");
                 //StartDateDropDown.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "Startdate"));
+                GlobalDefinitions.wait(10000);
+                Save.Click();
+                GlobalDefinitions.wait(10000);
+                Assert.Pass("Successfully Service Listing is Added");
             }
             catch (Exception ex)
             {
@@ -289,11 +330,13 @@ namespace MarsFramework.Pages
                 string SecondPath = "]/td[3]";
                 string getTitle = null;
                 bool flag = false;
+                int temp = 0;
                 while(true)
                 {
                     for (int rownum = 1; rownum <= (Totalrows.Count); rownum++)
                     {
                         getTitle = GlobalDefinitions.driver.FindElement(By.XPath(FirstPath + rownum + SecondPath)).Text;
+                        temp = 1;
                         if (getTitle == GlobalDefinitions.ExcelLib.ReadData(2, "Title"))
                         {
                             //Click on Edit button 
@@ -309,12 +352,14 @@ namespace MarsFramework.Pages
                             Save.Click();
                             GlobalDefinitions.wait(7000);
                             flag = true;
-                            Console.WriteLine("Successfully Updated");
+                          Assert.Pass("Successfully Updated");
                             return;
                         }
                     }
                     if (flag == false)
                         NextPage.Click();
+                    if (temp == 1)
+                        Assert.Pass("There is no matching record to edit");
                 }            
             }
             catch(Exception ex)
@@ -322,8 +367,10 @@ namespace MarsFramework.Pages
                 Console.WriteLine(ex.Message);
             }
         }
+
         internal void DeleteShareSkill()
         {
+        
             try
             {
                 //Click on Manage Listings                
@@ -333,11 +380,13 @@ namespace MarsFramework.Pages
                 string SecondPath = "]/td[3]";
                 string getTitle = null;
                 bool flag = false;
-                while(true)
+                int temp = 0;
+                while (true)
                 {
                     for (int rownum = 1; rownum <= (Totalrows.Count); rownum++)
                     {
                         getTitle = GlobalDefinitions.driver.FindElement(By.XPath(FirstPath + rownum + SecondPath)).Text;
+                        temp = 1;
                         if (getTitle == GlobalDefinitions.ExcelLib.ReadData(2, "Title"))
                         {
                             if (GlobalDefinitions.ExcelLib.ReadData(2, "Deleteaction") == "Yes")
@@ -347,7 +396,7 @@ namespace MarsFramework.Pages
                                 GlobalDefinitions.wait(10000);
                                 Yes.Click();
                                 GlobalDefinitions.wait(10000);
-                                Console.WriteLine("Record is successfully deleted");
+                                Assert.Pass("Record is successfully deleted");
                                 flag = true;
                                 return;
                             }
@@ -358,18 +407,18 @@ namespace MarsFramework.Pages
                                 GlobalDefinitions.wait(10000);
                                 No.Click();
                                 GlobalDefinitions.wait(10000);
-                                Console.WriteLine("There is matching record but it is not deleted");
+                                Assert.Pass("There is matching record but it is not deleted");
                                 flag = true;
                                 return;
                             }
-                        }
-                        else
-                            Assert.Pass("There is no matching record to delete");
+                        }                         
                     }
                     if(flag==false)
                     NextPage.Click();
+                    if (temp==1)
+                        Assert.Pass("There is no matching record to delete");
                 }
-                    
+                 
             }
             catch(Exception ex)
             {
